@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "CapstoneReactNativePractice",
-    "slug": "CapstoneReactNativePractice",
+    "name": "HanddownPrototype",
+    "slug": "handdownPrototype",
+    "scheme": "handdownPrototype",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,6 +24,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ]
   }
 }

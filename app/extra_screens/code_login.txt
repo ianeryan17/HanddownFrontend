@@ -1,0 +1,20 @@
+@router.post("/email-verification/")
+async def email_verification(email: str = Form(...), password: str = Form(...)):
+    db = firestore.client()
+
+    # Generate code and send email directly
+    code = generate_code()
+    send_email(email, code)
+    
+    verification_data = {
+        'code': code,
+        'email': email,
+        'password': password
+    }
+
+    db.collection('profile-verifications').document(code).set(verification_data)
+    
+    return {"message": "Successfully stored verification data", "email": email}
+
+
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload

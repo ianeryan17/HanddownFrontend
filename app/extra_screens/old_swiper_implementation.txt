@@ -1,0 +1,34 @@
+
+  // ***********************************************************************
+  //                      OLD IMPLEMENTATION 
+  // ***********************************************************************
+  // const [imageUri, setImageUri] = useState(null);
+  // const [imageTitle, setImageTitle] = useState('')
+  // const fetchImageAndTitle = async (listingId) => {
+  //   try {
+  //     const response = await fetch(`http://${ipAddress}:8000/listings/${listingId}`);
+  //     const data = await response.json();
+  
+  //     if (data.imageUrl) {
+  //       setImageUri(data.imageUrl);
+  //     } else {
+  //       console.error("Error: Image URL not found.");
+  //     }
+  //     if (data.title) {
+  //       setImageTitle(data.title);
+  //     } else {
+  //       console.error("Error: Image title not found.");
+  //     }
+
+  //   } catch (error) {
+  //     console.error("Error fetching image:", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   const listingId = 'FxviZDunH2dogL0c54Ps'; // Replace with actual listing ID
+  //   fetchImageAndTitle(listingId);
+  // }, []); // Empty dependency array ensures this runs once on mount
+  // ***********************************************************************
+  //                      OLD IMPLEMENTATION 
+  // ***********************************************************************

@@ -1,0 +1,125 @@
+ const [transactionType, setTransactionType] = useState(null);  // Store the selected type
+  const [isDropdownVisible, setDropdownVisible] = useState(false);  // State to control dropdown visibility
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);  // Toggle visibility
+  };
+  // const renderLabel = () => {
+  //   if (value || isFocus) {
+  //     return (
+  //       <Text style={[styles.label, isFocus && { color: 'blue' }]}>
+  //         Dropdown label
+  //       </Text>
+  //     );
+  //   }
+  //   return null;
+  // };
+
+  const transactionOptions = [
+    { label: 'Give', value: 'give' },
+    { label: 'Lend', value: 'lend' },
+    { label: 'Buy', value: 'buy' },
+    { label: 'Sell', value: 'sell' }
+  ];
+
+// {/* <View style={styles.transactionTypeSection}>
+//   <View style={styles.transactionTypeLabelContainer}>
+//     <Text style={styles.transactionTypeLabel}>Transaction Type</Text>
+//   </View>
+
+//   {/* Touchable to toggle dropdown visibility */}
+//   <TouchableOpacity style={styles.dropdownToggle} onPress={toggleDropdown}>
+//     <Text style={styles.dropdownLabel}>
+//       {transactionType ? transactionType : 'Select Type'}
+//     </Text>
+//   </TouchableOpacity>
+
+//   {/* Conditional rendering of the dropdown menu */}
+//   {isDropdownVisible && (
+//     <Dropdown
+//       style={styles.dropdown}
+//       data={transactionOptions}
+//       labelField="label"
+//       valueField="value"
+//       value={transactionType}
+//       onChange={(item) => {
+//         setTransactionType(item.label);  // Set the selected transaction type
+//         setDropdownVisible(false);  // Hide the dropdown after selection
+//       }}
+//       placeholder="Select Type"
+//       placeholderStyle={styles.placeholderStyle}
+//       selectedTextStyle={styles.selectedTextStyle}
+//       dropdownPosition="bottom"  // Ensure it opens downwards
+//       renderItem={(item) => (
+//         <View style={styles.dropdownItem}>
+//           <Text style={styles.dropdownItemText}>{item.label}</Text>
+//         </View>
+//       )}
+//     />
+//   )}
+// </View> */}
+
+
+// transactionTypeSection: {
+//   flexDirection: 'row',
+//   justifyContent: 'space-between',
+//   alignItems: 'center',
+//   marginBottom: 20,
+//   width: '90%',
+//   backgroundColor: '#ffffff',
+//   backgroundColor: 'green',
+// },
+// transactionTypeLabelContainer: {
+//   flex: 1,
+//   alignItems: 'flex-start',
+//   backgroundColor: 'blue',
+// },
+// transactionTypeLabel: {
+//   fontSize: 24,
+//   color: '#846425',
+//   fontFamily: 'work_sans',
+//   backgroundColor: 'red',
+// },
+// dropdownToggle: {
+//   borderColor: '#846425',
+//   borderWidth: 1,
+//   padding: 10,
+//   borderRadius: 5,
+//   width: '50%',
+//   justifyContent: 'center',
+//   alignItems: 'center',
+//   backgroundColor: 'orange',
+// },
+// dropdownLabel: {
+//   fontSize: 16,
+//   color: '#846425',
+//   fontFamily: 'work_sans',
+//   backgroundColor: 'yellow',
+// },
+// dropdown: {
+//   width: '50%',
+//   marginTop: 10,
+//   borderRadius: 5,
+//   backgroundColor: '#ffffff',
+//   borderWidth: 1,
+//   borderColor: '#846425',
+//   flexDirection: 'row', // Ensure dropdown items are stacked vertically
+//   backgroundColor: 'purple',
+// },
+// placeholderStyle: {
+//   fontSize: 16,
+//   color: '#B7B7B7',
+// },
+// selectedTextStyle: {
+//   fontSize: 16,
+//   color: '#846425',
+// },
+// dropdownItem: {
+//   flexDirection: 'column', // Ensure text inside the dropdown goes from left to right
+//   alignItems: 'center',
+//   padding: 10,
+// },
+// dropdownItemText: {
+//   fontSize: 16,
+//   color: '#846425',
+//   fontFamily: 'work_sans',
+// },
